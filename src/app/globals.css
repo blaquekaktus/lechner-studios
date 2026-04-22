@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-alpine-sand: #D8CDB6;
+  --color-alpine-blue: #BFCAD5;
+  --color-alpine-navy: #2A3F54;
+  --color-alpine-sage: #718A72;
+  --color-alpine-light: #F5F4F1;
+  --color-alpine-dark: #1A1A1A;
+  
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: var(--color-alpine-light);
+  --foreground: var(--color-alpine-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-alpine-dark);
+    --foreground: var(--color-alpine-light);
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
+.text-alpine-sand { color: var(--color-alpine-sand); }
+.text-alpine-blue { color: var(--color-alpine-blue); }
+.text-alpine-navy { color: var(--color-alpine-navy); }
+.text-alpine-sage { color: var(--color-alpine-sage); }
+.text-alpine-light { color: var(--color-alpine-light); }
+.text-alpine-dark { color: var(--color-alpine-dark); }
+
+.bg-alpine-sand { background-color: var(--color-alpine-sand); }
+.bg-alpine-blue { background-color: var(--color-alpine-blue); }
+.bg-alpine-navy { background-color: var(--color-alpine-navy); }
+.bg-alpine-sage { background-color: var(--color-alpine-sage); }
+.bg-alpine-light { background-color: var(--color-alpine-light); }
+.bg-alpine-dark { background-color: var(--color-alpine-dark); }
