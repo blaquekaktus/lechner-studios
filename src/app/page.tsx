@@ -4,6 +4,7 @@ import { LanguageProvider } from "../context/LanguageContext";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Founder from "../components/Founder";
 import Work from "../components/Work";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
@@ -16,6 +17,7 @@ export default function Home() {
         <Nav />
         <Hero />
         <About />
+        <Founder />
         <Work />
         <Services />
         <Contact />

@@ -20,6 +20,12 @@ export const dictionaries = {
       stat2n: "3", stat2l: "Live now",
       stat3n: "1", stat3l: "Studio, Tirol",
     },
+    founder: {
+      overline: "FOUNDER",
+      headline: "A solutions-oriented founder.",
+      body: "Sonja Lechner is a solutions-oriented founder. When she sees a problem and no satisfying solution exists, she builds one.\n\nBorn in Grenada and Tyrolean-by-adoption since 2009, she studied Softwareentwicklung und Management at IT-Kolleg Imst. Years of relocation under difficult conditions planted the idea for Vistera — a spatial-web platform for walking through a space before visiting it in person. She built it alone in 2025, using AI as her team, while holding a full-time role in banking-sector IT.\n\nThe same pattern shows up in Virtual Office Tirol, CodeFlash, Werk, and The AI Shortcut — each a missing thing, built.\n\nIn 2026, Lechner Studios was formed to house and continue these creations. The vision has grown from solo founder to family business. Her eldest, Jason Lechner (20), is Geschäftsführer and a 10 % shareholder with vesting. Two other family members contribute internally, by choice not publicly positioned.",
+      twinLine: "Every leader at Lechner Studios has a disclosed AI twin. Every twin operates inside a declared, revocable autonomy scope. Inside it, the twin acts; outside it, the twin drafts — and a human decides. Every twin identifies itself as AI, immediately and without hedging, whenever asked.",
+    },
     work: {
       overline: "SELECTED WORK",
       headline: "Products & Projects",
@@ -139,6 +145,12 @@ export const dictionaries = {
       stat1n: "6", stat1l: "Projekte gebaut",
       stat2n: "3", stat2l: "Live im Einsatz",
       stat3n: "1", stat3l: "Studio in Tirol",
+    },
+    founder: {
+      overline: "GRÜNDERIN",
+      headline: "Gründerin mit einem klaren Muster.",
+      body: "Sonja Lechner ist Gründerin mit einem klaren Muster: Sie sieht ein Problem — und wenn es keine passende Lösung gibt, baut sie eine.\n\nGeboren in Grenada, seit 2009 in Tirol zu Hause. Ausbildung am IT-Kolleg Imst, Softwareentwicklung und Management. Mehrere Umzüge unter schwierigen Bedingungen wurden zur Grundlage für Vistera — eine Spatial-Web-Plattform, mit der man einen Raum durchläuft, bevor man ihn physisch besichtigt. 2025 alleine gebaut, mit KI als Team, parallel zu einer Vollzeitstelle in der Banken-IT.\n\nDasselbe Muster bei Virtual Office Tirol, CodeFlash, Werk und The AI Shortcut — jedes Mal eine fehlende Lösung, gebaut.\n\n2026 entstand Lechner Studios als Dach für diese Arbeiten — und um weiterzubauen. Aus der Solo-Gründerin ist ein Familienunternehmen geworden. Ihr Ältester, Jason Lechner (20), ist Geschäftsführer mit 10 % Anteilen (Vesting). Zwei weitere Familienmitglieder tragen intern bei — bewusst ohne öffentliche Rolle.",
+      twinLine: "Jede Führungsperson bei Lechner Studios hat einen öffentlich deklarierten KI-Zwilling. Jeder Zwilling operiert innerhalb eines deklarierten und widerrufbaren Autonomie-Bereichs. Innerhalb dieses Bereichs handelt der Zwilling selbst; außerhalb entwirft er — und ein Mensch entscheidet. Jeder Zwilling identifiziert sich als KI — sofort, unmissverständlich, wann immer gefragt.",
     },
     work: {
       overline: "AUSGEWÄHLTE ARBEITEN",
