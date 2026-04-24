@@ -9,6 +9,7 @@ export default function Founder() {
   return (
     <section
       id="founder"
+      aria-labelledby="founder-heading"
       style={{
         background: "#FDFBF8",
         padding: "120px 48px",
@@ -34,7 +35,9 @@ export default function Founder() {
           gap: "80px",
           alignItems: "start",
         }}>
-          <h2 style={{
+          <h2
+            id="founder-heading"
+            style={{
             fontFamily: "var(--font-display)",
             fontSize: "clamp(2rem, 3.5vw, 3rem)",
             fontWeight: 400,
