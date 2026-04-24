@@ -1,21 +1,24 @@
 "use client";
-
 import React from "react";
 import { LanguageProvider } from "../context/LanguageContext";
-import Header from "../components/Header";
+import Nav from "../components/Nav";
 import Hero from "../components/Hero";
-import ServiceGrid from "../components/ServiceGrid";
+import About from "../components/About";
+import Work from "../components/Work";
+import Services from "../components/Services";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <LanguageProvider>
-      <main className="min-h-screen flex flex-col selection:bg-alpine-sand/50">
-        <Header />
-        <div className="flex-1">
-          <Hero />
-          <ServiceGrid />
-        </div>
+      <main style={{ minHeight: "100vh" }}>
+        <Nav />
+        <Hero />
+        <About />
+        <Work />
+        <Services />
+        <Contact />
         <Footer />
       </main>
     </LanguageProvider>

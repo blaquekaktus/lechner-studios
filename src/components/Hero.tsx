@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -7,26 +6,117 @@ export default function Hero() {
   const { dict } = useLanguage();
 
   return (
-    <section className="min-h-[70vh] flex flex-col justify-center px-6 md:px-12 pb-20 pt-10">
-      <div className="max-w-4xl">
-        <h1 className="flex flex-col mb-4">
-          <span className="font-sans font-bold text-6xl md:text-8xl tracking-tight text-alpine-dark">
-            lechner
-          </span>
-          <span className="font-serif italic text-5xl md:text-7xl text-alpine-navy/80 -mt-2 md:-mt-4">
-            .studios
-          </span>
-        </h1>
-        
-        <div className="w-16 h-px bg-alpine-navy/30 my-8"></div>
-        
-        <p className="font-sans text-sm md:text-base font-medium tracking-widest text-alpine-navy uppercase mb-12">
-          {dict.hero.tagline}
+    <section
+      className="grain"
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        background: "linear-gradient(160deg, #1A1812 0%, #252219 55%, #1A1812 100%)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        padding: "0 48px 80px",
+        overflow: "hidden",
+      }}
+    >
+      {/* Subtle radial glow */}
+      <div style={{
+        position: "absolute", inset: 0, pointerEvents: "none",
+        background: "radial-gradient(ellipse 60% 50% at 30% 60%, rgba(200,169,110,0.06) 0%, transparent 70%)",
+      }} />
+
+      {/* Vertical rule */}
+      <div style={{
+        position: "absolute", left: "48px", top: 0, bottom: 0,
+        width: "1px", background: "rgba(246,241,235,0.06)",
+      }} />
+
+      <div style={{ position: "relative", zIndex: 2, maxWidth: "900px" }}>
+        {/* Overline */}
+        <p
+          className="reveal reveal-1"
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.65rem",
+            fontWeight: 500,
+            letterSpacing: "0.32em",
+            textTransform: "uppercase",
+            color: "#C8A96E",
+            marginBottom: "2rem",
+          }}
+        >
+          {dict.hero.overline}
         </p>
 
-        <p className="text-xs tracking-[0.2em] text-alpine-sage uppercase mt-24">
+        {/* Wordmark */}
+        <h1
+          className="reveal reveal-2"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(4rem, 11vw, 9.5rem)",
+            fontWeight: 300,
+            lineHeight: 0.92,
+            letterSpacing: "-0.03em",
+            color: "#F6F1EB",
+            marginBottom: "2.5rem",
+            whiteSpace: "pre-line",
+          }}
+        >
+          {dict.hero.tagline}
+        </h1>
+
+        {/* Gold separator */}
+        <div
+          className="reveal reveal-3"
+          style={{ width: "48px", height: "1px", background: "#C8A96E", marginBottom: "2.5rem" }}
+        />
+
+        {/* Location */}
+        <p
+          className="reveal reveal-4"
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.62rem",
+            fontWeight: 500,
+            letterSpacing: "0.28em",
+            textTransform: "uppercase",
+            color: "rgba(246,241,235,0.35)",
+          }}
+        >
           {dict.hero.location}
         </p>
+      </div>
+
+      {/* Scroll cue */}
+      <div
+        className="reveal reveal-5"
+        style={{
+          position: "absolute",
+          bottom: "48px",
+          right: "48px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "12px",
+          zIndex: 2,
+        }}
+      >
+        <span style={{
+          fontFamily: "var(--font-mono)",
+          fontSize: "0.55rem",
+          letterSpacing: "0.28em",
+          textTransform: "uppercase",
+          color: "rgba(246,241,235,0.3)",
+          writingMode: "vertical-rl",
+        }}>
+          {dict.hero.scroll}
+        </span>
+        <div style={{
+          width: "1px",
+          height: "60px",
+          background: "linear-gradient(to bottom, rgba(200,169,110,0.6), transparent)",
+          animation: "scrollPulse 2.5s ease-in-out infinite",
+        }} />
       </div>
     </section>
   );

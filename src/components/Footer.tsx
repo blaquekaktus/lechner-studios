@@ -1,21 +1,54 @@
 "use client";
-
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
   const { dict } = useLanguage();
-  const currentYear = new Date().getFullYear();
+  const d = dict.footer;
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full py-12 px-6 md:px-12 border-t border-alpine-navy/10 flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-alpine-navy/60">
-      <div className="mb-4 md:mb-0">
-        <span className="font-bold text-alpine-dark">lechner</span>.studios &copy; {currentYear}. {dict.footer.rights}
-      </div>
-      <div className="flex gap-6">
-        <a href="#" className="hover:text-alpine-dark transition-colors">Imprint</a>
-        <a href="#" className="hover:text-alpine-dark transition-colors">Privacy</a>
-      </div>
+    <footer style={{
+      background: "#1A1812",
+      padding: "40px 48px",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: "20px",
+      flexWrap: "wrap",
+      borderTop: "1px solid rgba(246,241,235,0.06)",
+    }}>
+      <span style={{
+        fontFamily: "var(--font-display)",
+        fontSize: "1rem",
+        fontWeight: 300,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "rgba(246,241,235,0.6)",
+      }}>
+        Lechner Studios
+      </span>
+
+      <span style={{
+        fontFamily: "var(--font-mono)",
+        fontSize: "0.6rem",
+        color: "rgba(246,241,235,0.2)",
+        letterSpacing: "0.15em",
+        textTransform: "uppercase",
+        textAlign: "center",
+      }}>
+        {d.tagline}
+      </span>
+
+      <span style={{
+        fontFamily: "var(--font-mono)",
+        fontSize: "0.6rem",
+        color: "rgba(246,241,235,0.25)",
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+      }}>
+        © {year} · {d.rights}
+      </span>
     </footer>
   );
 }

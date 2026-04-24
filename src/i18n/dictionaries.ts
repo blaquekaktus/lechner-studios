@@ -1,100 +1,243 @@
 export const dictionaries = {
   en: {
     nav: {
-      services: "Services",
-      work: "Our Work",
+      work: "Work",
+      about: "About",
       contact: "Contact",
-      toggle: "DE"
+      toggle: "DE",
     },
     hero: {
-      tagline: "WEB, IDENTITY & GROWTH",
-      location: "TIROL • ÖSTERREICH",
-      description: "Premium digital experiences for Tyrolean businesses. From tailored web design to powerful SaaS platforms."
+      overline: "INDEPENDENT DIGITAL STUDIO",
+      tagline: "Where precision\nmeets product.",
+      location: "WATTENS · TIROL · ÖSTERREICH",
+      scroll: "SCROLL",
+    },
+    about: {
+      overline: "ABOUT THE STUDIO",
+      headline: "An independent studio building digital products with editorial precision.",
+      body: "Lechner Studios is a one-person studio based in Wattens, Tirol. We design and develop digital products — from developer tools and PropTech platforms to AI-powered office systems and local web design — with a focus on craft, clarity, and long-term value.",
+      stat1n: "6", stat1l: "Products built",
+      stat2n: "3", stat2l: "Live now",
+      stat3n: "1", stat3l: "Studio, Tirol",
+    },
+    work: {
+      overline: "SELECTED WORK",
+      headline: "Products & Projects",
+      statusLive: "Live",
+      statusDev: "In Development",
+      statusPaused: "Paused",
+      statusPlanned: "Planned",
+      statusService: "Active Service",
+      visit: "Visit →",
+      items: [
+        {
+          id: "codeflash",
+          title: "CodeFlash",
+          category: "SaaS · EdTech",
+          year: "2025",
+          status: "live",
+          desc: "Developer flashcard packs for every major language and framework. 82 packs, 1,640 cards across 32 topics — from Python to OWASP.",
+          url: "https://codeflash.lechner-studios.at",
+        },
+        {
+          id: "websites",
+          title: "Webdesign — Lechner Studios",
+          category: "Service · Web Design",
+          year: "2024 —",
+          status: "service",
+          desc: "Custom websites for independent businesses. No templates, no builders — every site is designed to measure for the client's market and voice.",
+          url: "https://websites.lechner-studios.at",
+        },
+        {
+          id: "virtual-office",
+          title: "Virtual Office Tirol",
+          category: "SaaS · AI Systems",
+          year: "2025 —",
+          status: "dev",
+          desc: "AI-powered phone answering, legally usable business address, and automated back-office for Innsbruck-based businesses.",
+          url: "https://virtual-office.lechner-studios.at",
+        },
+        {
+          id: "vistera",
+          title: "Vistera",
+          category: "PropTech · VR",
+          year: "2024",
+          status: "paused",
+          desc: "4K cinema and VR property walkthroughs for real estate. A global platform built for the Austrian market — the DUO Standard.",
+          url: "https://vistera.io",
+        },
+        {
+          id: "brightbean",
+          title: "BrightBean Studio",
+          category: "Open Source · Social",
+          year: "2026",
+          status: "planned",
+          desc: "Open-source, self-hostable social media management. Multi-workspace visual calendar and publishing engine.",
+          url: "#",
+        },
+        {
+          id: "ai-shortcut",
+          title: "The AI Shortcut",
+          category: "AI · Content",
+          year: "2026",
+          status: "planned",
+          desc: "An end-to-end content production system. Ideas become research, research becomes scripts, scripts become published content — automatically.",
+          url: "#",
+        },
+      ],
     },
     services: {
-      vistera: {
-        title: "Vistera",
-        subtitle: "PropTech VR Platform",
-        desc: "A global, VR-first real-estate platform where buyers tour properties via photorealistic 360° walkthroughs before ever stepping inside."
-      },
-      codeflash: {
-        title: "CodeFlash",
-        subtitle: "Spaced-Repetition Flashcards",
-        desc: "Interactive flashcards for developers & security pros. No account, no tracking, works offline."
-      },
-      aiShortcut: {
-        title: "The AI Shortcut",
-        subtitle: "Content Engine",
-        desc: "An end-to-end AI content production system turning ideas into research, scripts, and video renders."
-      },
-      websites: {
-        title: "Websites for KMUs",
-        subtitle: "Tailored Web Design",
-        desc: "Inbound-only, custom web design practice for small and medium enterprises in Tyrol."
-      },
-      virtualOffice: {
-        title: "Virtual Office Tirol",
-        subtitle: "Virtual Services",
-        desc: "Premium virtual office service for Innsbruck. Legally usable business address and mail handling."
-      },
-      brightBean: {
-        title: "BrightBean Studio",
-        subtitle: "Open-Source Social",
-        desc: "Open-source, self-hostable social media management platform. Multi-workspace, visual calendar, and publishing engine."
-      }
+      overline: "WHAT WE DO",
+      headline: "Three disciplines.\nOne studio.",
+      items: [
+        {
+          title: "Product Development",
+          desc: "Full-stack design and engineering for digital products. From zero to live — and from live to profitable.",
+        },
+        {
+          title: "Web Design",
+          desc: "Custom websites for independent businesses. No page builders, no off-the-shelf templates. Every site earns its price.",
+        },
+        {
+          title: "AI Systems",
+          desc: "Phone answering, content automation, and intelligent workflows. AI that does the actual work, not just the talking.",
+        },
+      ],
+    },
+    contact: {
+      overline: "CONTACT",
+      headline: "Let's talk.",
+      body: "New projects, collaborations, or just curious about the work — reach out directly.",
+      email: "hallo@lechner-studios.at",
+      location: "Wattens, Tirol, Österreich",
+      impressum: "Impressum",
+      privacy: "Privacy",
     },
     footer: {
-      rights: "All rights reserved."
-    }
+      rights: "All rights reserved.",
+      tagline: "Built with precision. Tirol, Österreich.",
+    },
   },
+
   de: {
     nav: {
-      services: "Leistungen",
-      work: "Unsere Arbeit",
+      work: "Arbeiten",
+      about: "Über uns",
       contact: "Kontakt",
-      toggle: "EN"
+      toggle: "EN",
     },
     hero: {
-      tagline: "WEB, IDENTITÄT & WACHSTUM",
-      location: "TIROL • ÖSTERREICH",
-      description: "Premium Digitalerlebnisse für Tiroler Unternehmen. Von maßgeschneidertem Webdesign bis zu leistungsstarken SaaS-Plattformen."
+      overline: "UNABHÄNGIGES DIGITALSTUDIO",
+      tagline: "Wo Präzision auf\nProdukt trifft.",
+      location: "WATTENS · TIROL · ÖSTERREICH",
+      scroll: "SCROLLEN",
+    },
+    about: {
+      overline: "ÜBER DAS STUDIO",
+      headline: "Ein unabhängiges Studio, das digitale Produkte mit editorischer Präzision baut.",
+      body: "Lechner Studios ist ein Ein-Personen-Studio aus Wattens, Tirol. Wir gestalten und entwickeln digitale Produkte — von Entwickler-Tools und PropTech-Plattformen bis hin zu KI-Systemen und lokalem Webdesign — mit Fokus auf Handwerk, Klarheit und langfristigen Mehrwert.",
+      stat1n: "6", stat1l: "Projekte gebaut",
+      stat2n: "3", stat2l: "Live im Einsatz",
+      stat3n: "1", stat3l: "Studio in Tirol",
+    },
+    work: {
+      overline: "AUSGEWÄHLTE ARBEITEN",
+      headline: "Produkte & Projekte",
+      statusLive: "Live",
+      statusDev: "In Entwicklung",
+      statusPaused: "Pausiert",
+      statusPlanned: "Geplant",
+      statusService: "Aktiver Service",
+      visit: "Besuchen →",
+      items: [
+        {
+          id: "codeflash",
+          title: "CodeFlash",
+          category: "SaaS · EdTech",
+          year: "2025",
+          status: "live",
+          desc: "Lernkarten-Packs für Entwickler. 82 Packs, 1.640 Karten in 32 Themen — von Python bis OWASP.",
+          url: "https://codeflash.lechner-studios.at",
+        },
+        {
+          id: "websites",
+          title: "Webdesign — Lechner Studios",
+          category: "Service · Webdesign",
+          year: "2024 —",
+          status: "service",
+          desc: "Maßgeschneiderte Websites für unabhängige Unternehmen. Keine Vorlagen, kein Baukasten — jede Site wird für Markt und Stimme des Kunden entworfen.",
+          url: "https://websites.lechner-studios.at",
+        },
+        {
+          id: "virtual-office",
+          title: "Virtual Office Tirol",
+          category: "SaaS · KI-Systeme",
+          year: "2025 —",
+          status: "dev",
+          desc: "KI-gestützte Telefon-Assistenz, ladungsfähige Geschäftsadresse und automatisiertes Back-Office für Innsbrucker Betriebe.",
+          url: "https://virtual-office.lechner-studios.at",
+        },
+        {
+          id: "vistera",
+          title: "Vistera",
+          category: "PropTech · VR",
+          year: "2024",
+          status: "paused",
+          desc: "4K-Kino und VR-Rundgänge für Immobilien. Eine globale Plattform für den österreichischen Markt — der DUO Standard.",
+          url: "https://vistera.io",
+        },
+        {
+          id: "brightbean",
+          title: "BrightBean Studio",
+          category: "Open Source · Social",
+          year: "2026",
+          status: "planned",
+          desc: "Open-Source Social-Media-Management. Multi-Workspace, visueller Kalender, Publishing-Engine.",
+          url: "#",
+        },
+        {
+          id: "ai-shortcut",
+          title: "The AI Shortcut",
+          category: "KI · Content",
+          year: "2026",
+          status: "planned",
+          desc: "Ein durchgängiges Content-Produktionssystem. Ideen werden zu Skripten, Skripte werden automatisch zu veröffentlichten Inhalten.",
+          url: "#",
+        },
+      ],
     },
     services: {
-      vistera: {
-        title: "Vistera",
-        subtitle: "PropTech VR Plattform",
-        desc: "Eine globale, VR-First Immobilienplattform. Käufer besichtigen Immobilien via fotorealistischen 360°-Rundgängen."
-      },
-      codeflash: {
-        title: "CodeFlash",
-        subtitle: "Spaced-Repetition Lernkarten",
-        desc: "Interaktive Lernkarten für Entwickler & Security-Profis. Ohne Account, ohne Tracking, offline verfügbar."
-      },
-      aiShortcut: {
-        title: "Die KI-Shortcuts",
-        subtitle: "Content Engine",
-        desc: "Ein durchgängiges KI-System für die Content-Produktion. Von der Idee über Skripte bis zum fertigen Video."
-      },
-      websites: {
-        title: "Websites für KMUs",
-        subtitle: "Maßgeschneidertes Webdesign",
-        desc: "Inbound-Only Webdesign-Agentur für kleine und mittlere Unternehmen in Tirol."
-      },
-      virtualOffice: {
-        title: "Virtual Office Tirol",
-        subtitle: "Virtuelle Dienstleistungen",
-        desc: "Premium Virtual Office Service für Innsbruck. Ladungsfähige Geschäftsadresse und Postbearbeitung."
-      },
-      brightBean: {
-        title: "BrightBean Studio",
-        subtitle: "Open-Source Social",
-        desc: "Open-Source Social-Media-Management. Multi-Workspace, visueller Kalender und Publishing-Engine."
-      }
+      overline: "LEISTUNGEN",
+      headline: "Drei Disziplinen.\nEin Studio.",
+      items: [
+        {
+          title: "Produktentwicklung",
+          desc: "Ganzheitliches Design und Engineering für digitale Produkte. Von null bis live — und von live bis profitabel.",
+        },
+        {
+          title: "Webdesign",
+          desc: "Maßgeschneiderte Websites für unabhängige Unternehmen. Kein Baukasten, keine Vorlagen. Jede Site verdient ihren Preis.",
+        },
+        {
+          title: "KI-Systeme",
+          desc: "Telefon-Assistenz, Content-Automatisierung und intelligente Workflows. KI, die die Arbeit übernimmt — nicht nur redet.",
+        },
+      ],
+    },
+    contact: {
+      overline: "KONTAKT",
+      headline: "Lass uns reden.",
+      body: "Neue Projekte, Kooperationen oder einfach neugierig auf die Arbeit — meld dich direkt.",
+      email: "hallo@lechner-studios.at",
+      location: "Wattens, Tirol, Österreich",
+      impressum: "Impressum",
+      privacy: "Datenschutz",
     },
     footer: {
-      rights: "Alle Rechte vorbehalten."
-    }
-  }
+      rights: "Alle Rechte vorbehalten.",
+      tagline: "Mit Präzision gebaut. Tirol, Österreich.",
+    },
+  },
 };
 
 export type Dictionary = typeof dictionaries.en;
