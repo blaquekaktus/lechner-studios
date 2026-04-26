@@ -1,0 +1,55 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(npm run *)",
+      "Bash(npx *)",
+      "Bash(ls *)",
+      "Edit",
+      "Write",
+      "Read",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -n --arg d \"$(date +%Y-%m-%d)\" '{\"systemMessage\": \"Session \\($d) \\u2014 lechner-studios (studio portfolio site, lechner-studios.at). Bilingual EN/DE, Cormorant + Manrope typography, ink palette. Check ai-brain/backlog/INDEX.md for active P0 blockers.\"}'",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "out=$(bash $HOME/dev/ai-brain/scripts/session-start-check.sh lechner-studios 2>/dev/null); if [ -n \"$out\" ]; then jq -n --arg m \"$out\" '{\"systemMessage\": (\"Unapplied ADR entries affecting lechner-studios:\\n\\n\" + $m)}'; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\": \"Before compacting: preserve (1) current branch name and any uncommitted file paths, (2) active P0 blockers from this session, (3) what was accomplished and what still remains open.\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\": \"Turn complete \\u2014 verify: tests pass \\u00b7 no PII in diff \\u00b7 if context feels slow, /compact with a summary hint before the next task.\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
