@@ -22,9 +22,28 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lechner-studios.at"),
   title: "Lechner Studios — Independent Digital Studio, Tirol",
   description:
     "Independent digital studio based in Wattens, Tirol. We build products, design websites, and deploy AI systems for businesses that want to stand out.",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "digital studio",
+    "web design",
+    "web development",
+    "AI systems",
+    "Tirol",
+    "Wattens",
+    "Österreich",
+    "Austria",
+  ],
+  authors: [{ name: "Lechner Studios" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Lechner Studios",
     description: "Independent digital studio. Wattens, Tirol, Österreich.",
@@ -32,6 +51,21 @@ export const metadata: Metadata = {
     siteName: "Lechner Studios",
     locale: "de_AT",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lechner Studios — Independent Digital Studio, Tirol",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lechner Studios — Independent Digital Studio, Tirol",
+    description:
+      "Independent digital studio based in Wattens, Tirol. We build products, design websites, and deploy AI systems for businesses that want to stand out.",
+    images: ["/og-image.png"],
   },
 };
 
