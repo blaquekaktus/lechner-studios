@@ -39,8 +39,12 @@ export default function Wordmark({
         <span
           style={{
             color: gold,
-            fontFamily: "var(--font-display-italiana), Italiana, serif",
-            fontWeight: 400,
+            fontFamily: "var(--font-display-bold), Cormorant, serif",
+            fontWeight: 700,
+            fontSize: "32px",
+            lineHeight: 0,
+            transform: "translateY(-1px)",
+            margin: "0 2px",
           }}
         >
           .
@@ -50,6 +54,7 @@ export default function Wordmark({
             fontFamily: "var(--font-display-italiana), Italiana, serif",
             fontWeight: 400,
             fontSize: studiosSize,
+            marginLeft: 0,
           }}
         >
           studios
