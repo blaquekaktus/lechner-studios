@@ -19,7 +19,7 @@ export default function Services() {
       {/* Subtle radial */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
-        background: "radial-gradient(ellipse 70% 60% at 80% 50%, rgba(200,169,110,0.04) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 70% 60% at 80% 50%, rgba(201,169,97,0.04) 0%, transparent 70%)",
       }} />
 
       <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
@@ -30,7 +30,7 @@ export default function Services() {
           fontWeight: 600,
           letterSpacing: "0.28em",
           textTransform: "uppercase",
-          color: "#C8A96E",
+          color: "#C9A961",
           marginBottom: "2rem",
         }}>
           {d.overline}
@@ -71,7 +71,7 @@ export default function Services() {
               <div style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.6rem",
-                color: "#C8A96E",
+                color: "#C9A961",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 fontWeight: 600,

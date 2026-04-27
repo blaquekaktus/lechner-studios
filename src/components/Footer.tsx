@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
+import Wordmark from "./Wordmark";
 
 export default function Footer() {
   const { dict } = useLanguage();
@@ -18,15 +19,8 @@ export default function Footer() {
       flexWrap: "wrap",
       borderTop: "1px solid rgba(246,241,235,0.06)",
     }}>
-      <span style={{
-        fontFamily: "var(--font-display)",
-        fontSize: "1rem",
-        fontWeight: 300,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        color: "rgba(246,241,235,0.6)",
-      }}>
-        Lechner Studios
+      <span aria-label="Lechner Studios" style={{ display: "inline-flex" }}>
+        <Wordmark variant="inline" size={20} onDark />
       </span>
 
       <span style={{

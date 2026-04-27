@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import Wordmark from "./Wordmark";
 
 export default function Nav() {
   const { dict, toggleLanguage } = useLanguage();
@@ -29,15 +30,11 @@ export default function Nav() {
     transition: "all 0.5s cubic-bezier(0.22,1,0.36,1)",
   };
 
-  const logoStyle: React.CSSProperties = {
-    fontFamily: "var(--font-display)",
-    fontSize: "1.1rem",
-    fontWeight: 400,
-    letterSpacing: "0.12em",
-    textTransform: "uppercase",
-    color: scrolled ? "#1A1812" : "#F6F1EB",
+  const logoLinkStyle: React.CSSProperties = {
     textDecoration: "none",
-    transition: "color 0.4s",
+    display: "inline-flex",
+    alignItems: "center",
+    transition: "opacity 0.4s",
   };
 
   const linkStyle: React.CSSProperties = {
@@ -66,7 +63,9 @@ export default function Nav() {
 
   return (
     <nav style={navStyle}>
-      <a href="#" style={logoStyle}>Lechner Studios</a>
+      <a href="#" style={logoLinkStyle} aria-label="Lechner Studios">
+        <Wordmark variant="inline" size={22} onDark={!scrolled} />
+      </a>
       <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
         <a href="#work"    style={linkStyle}>{dict.nav.work}</a>
         <a href="#about"   style={linkStyle}>{dict.nav.about}</a>

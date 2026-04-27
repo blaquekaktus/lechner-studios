@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Subtle radial glow */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
-        background: "radial-gradient(ellipse 60% 50% at 30% 60%, rgba(200,169,110,0.06) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 60% 50% at 30% 60%, rgba(184,148,77,0.06) 0%, transparent 70%)",
       }} />
 
       {/* Vertical rule */}
@@ -41,7 +41,7 @@ export default function Hero() {
             fontWeight: 500,
             letterSpacing: "0.32em",
             textTransform: "uppercase",
-            color: "#C8A96E",
+            color: "#C9A961",
             marginBottom: "2rem",
           }}
         >
@@ -68,7 +68,7 @@ export default function Hero() {
         {/* Gold separator */}
         <div
           className="reveal reveal-3"
-          style={{ width: "48px", height: "1px", background: "#C8A96E", marginBottom: "2.5rem" }}
+          style={{ width: "48px", height: "1px", background: "#C9A961", marginBottom: "2.5rem" }}
         />
 
         {/* Location */}
@@ -114,7 +114,7 @@ export default function Hero() {
         <div style={{
           width: "1px",
           height: "60px",
-          background: "linear-gradient(to bottom, rgba(200,169,110,0.6), transparent)",
+          background: "linear-gradient(to bottom, rgba(201,169,97,0.6), transparent)",
           animation: "scrollPulse 2.5s ease-in-out infinite",
         }} />
       </div>
