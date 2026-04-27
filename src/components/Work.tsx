@@ -4,7 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 const STATUS_STYLES: Record<string, { bg: string; color: string }> = {
   live:    { bg: "rgba(61,74,58,0.12)", color: "#3D4A3A" },
-  service: { bg: "rgba(200,169,110,0.15)", color: "#A08040" },
+  service: { bg: "rgba(184,148,77,0.15)", color: "#A08040" },
   dev:     { bg: "rgba(26,24,18,0.07)", color: "#8B8578" },
   paused:  { bg: "rgba(139,133,120,0.1)", color: "#8B8578" },
   planned: { bg: "rgba(139,133,120,0.07)", color: "#B0A898" },
@@ -49,7 +49,7 @@ export default function Work() {
               fontWeight: 600,
               letterSpacing: "0.28em",
               textTransform: "uppercase",
-              color: "#C8A96E",
+              color: "#B8944D",
               marginBottom: "12px",
             }}>
               {d.overline}
@@ -181,7 +181,7 @@ export default function Work() {
                       fontFamily: "var(--font-mono)",
                       fontSize: "0.65rem",
                       fontWeight: 600,
-                      color: "#C8A96E",
+                      color: "#B8944D",
                       letterSpacing: "0.08em",
                       opacity: isHovered ? 1 : 0,
                       transition: "opacity 0.2s",

@@ -23,7 +23,7 @@ export default function About() {
           fontWeight: 600,
           letterSpacing: "0.28em",
           textTransform: "uppercase",
-          color: "#C8A96E",
+          color: "#B8944D",
           marginBottom: "2.5rem",
         }}>
           {d.overline}

@@ -30,7 +30,7 @@ export default function Contact() {
               fontWeight: 600,
               letterSpacing: "0.28em",
               textTransform: "uppercase",
-              color: "#C8A96E",
+              color: "#B8944D",
               marginBottom: "2rem",
             }}>
               {d.overline}
@@ -74,7 +74,7 @@ export default function Contact() {
                 transition: "color 0.2s",
                 letterSpacing: "-0.01em",
               }}
-              onMouseEnter={e => ((e.target as HTMLElement).style.color = "#C8A96E")}
+              onMouseEnter={e => ((e.target as HTMLElement).style.color = "#B8944D")}
               onMouseLeave={e => ((e.target as HTMLElement).style.color = "#1A1812")}
             >
               {d.email}
