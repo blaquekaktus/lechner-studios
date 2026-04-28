@@ -61,9 +61,7 @@ export default function LegalPrivacyEN() {
           <p style={bodyStyle}>
             This site sets <strong>no cookies</strong>, performs{" "}
             <strong>no tracking</strong> and uses{" "}
-            <strong>no analytics services</strong>. There is{" "}
-            <strong>no contact form</strong>; the contact link only opens the
-            visitor&apos;s mail client (<code>mailto:</code>).
+            <strong>no analytics services</strong>.
           </p>
 
           <h3 style={h3Style}>3. Contact requests</h3>
