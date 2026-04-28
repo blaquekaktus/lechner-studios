@@ -259,4 +259,4 @@ export const dictionaries = {
 };
 
 export type Dictionary = typeof dictionaries.en;
-export type Locale = keyof typeof dictionaries;
+export type { Locale } from "./config";
