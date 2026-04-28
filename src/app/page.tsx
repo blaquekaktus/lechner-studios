@@ -13,7 +13,10 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <LanguageProvider>
-      <main style={{ minHeight: "100vh" }}>
+      <a href="#main" className="skip-link">
+        Skip to main content / Zum Inhalt
+      </a>
+      <main id="main" style={{ minHeight: "100vh" }}>
         <Nav />
         <Hero />
         <About />
