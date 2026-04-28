@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local workflow artifacts
+/.worktrees
+/.superpowers
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
