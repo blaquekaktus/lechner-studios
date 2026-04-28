@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 interface EndorsementStampProps {
   variant?: "default" | "medium" | "small";
   onDark?: boolean;
+  text?: string;
   style?: CSSProperties;
 }
 
@@ -16,10 +17,14 @@ const VARIANTS = {
  * "A Lechner Studios product" endorsement stamp — per Brand v4.1 spec §4.
  * Small 2×2 pillar grid + inline wordmark; used as a sub-product surface
  * boundary marker on every product surface (footer/about/landing).
+ *
+ * `text` defaults to the EN canonical string; pass a localized string
+ * (e.g. "EIN LECHNER STUDIOS PRODUKT") to override.
  */
 export default function EndorsementStamp({
   variant = "small",
   onDark = false,
+  text = "A LECHNER STUDIOS PRODUCT",
   style,
 }: EndorsementStampProps) {
   const v = VARIANTS[variant];
@@ -62,7 +67,7 @@ export default function EndorsementStamp({
           textTransform: "uppercase",
         }}
       >
-        A LECHNER STUDIOS PRODUCT
+        {text}
       </span>
     </div>
   );
