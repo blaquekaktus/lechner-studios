@@ -9,6 +9,7 @@ export default function About() {
   return (
     <section
       id="about"
+      className="lc-pad-section"
       style={{
         background: "#F6F1EB",
         padding: "120px 48px",
@@ -29,7 +30,7 @@ export default function About() {
           {d.overline}
         </p>
 
-        <div style={{
+        <div className="lc-stack-2col" style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "80px",

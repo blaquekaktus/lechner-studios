@@ -9,7 +9,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{
+    <footer className="lc-pad-footer" style={{
       background: "#1A1812",
       padding: "48px 48px 32px",
       display: "flex",

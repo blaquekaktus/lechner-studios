@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section
-      className="grain"
+      className="grain lc-pad-hero"
       style={{
         position: "relative",
         minHeight: "100vh",

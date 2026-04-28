@@ -73,3 +73,36 @@ body {
 .reveal-3 { animation-delay: 0.5s; }
 .reveal-4 { animation-delay: 0.7s; }
 .reveal-5 { animation-delay: 0.9s; }
+
+/* Mobile breakpoint — stack two-column grids and tighten section padding.
+ * !important is used because the components set padding and
+ * grid-template-columns inline; inline styles otherwise win against
+ * class-based rules. */
+@media (max-width: 768px) {
+  .lc-pad-section { padding: 72px 24px !important; }
+  .lc-pad-hero    { padding: 0 24px 64px !important; }
+  .lc-pad-footer  { padding: 28px 24px !important; }
+  .lc-pad-nav     { padding-left: 24px !important; padding-right: 24px !important; }
+
+  .lc-stack-2col {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .lc-stack-pillars {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Work section — internal layout fixes for narrow viewports */
+  .lc-work-header {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+  .lc-work-item {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .lc-work-meta {
+    text-align: left !important;
+    padding-top: 0 !important;
+  }
+}

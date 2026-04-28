@@ -18,7 +18,7 @@ export default function Services() {
 
   return (
     <section
-      className="grain"
+      className="grain lc-pad-section"
       style={{
         position: "relative",
         background: "#1A1812",
@@ -61,7 +61,7 @@ export default function Services() {
         </h2>
 
         {/* 2×2 pillar grid — full pillar-colored cells per brand spec §3.3 */}
-        <div style={{
+        <div className="lc-stack-pillars" style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           gap: "1px",
