@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Founder() {
@@ -31,24 +32,44 @@ export default function Founder() {
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "80px",
+          gridTemplateColumns: "minmax(260px, 0.85fr) 1.5fr",
+          gap: "72px",
           alignItems: "start",
         }}>
-          <h2
-            id="founder-heading"
-            style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(2rem, 3.5vw, 3rem)",
-            fontWeight: 400,
-            lineHeight: 1.15,
-            letterSpacing: "-0.02em",
-            color: "#1A1812",
-          }}>
-            {d.headline}
-          </h2>
+          {/* Photo column */}
+          <figure style={{ margin: 0 }}>
+            <Image
+              src="/founder/sonja-lechner.jpg"
+              alt={d.photoAlt}
+              width={1078}
+              height={1456}
+              priority
+              sizes="(max-width: 900px) 90vw, 380px"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          </figure>
 
+          {/* Text column */}
           <div>
+            <h2
+              id="founder-heading"
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                fontWeight: 400,
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
+                color: "#1A1812",
+                marginBottom: "32px",
+              }}
+            >
+              {d.headline}
+            </h2>
+
             <div style={{
               fontSize: "1rem",
               lineHeight: 1.9,
@@ -59,13 +80,14 @@ export default function Founder() {
             }}>
               {d.body}
             </div>
+
             <p style={{
               fontSize: "0.95rem",
               lineHeight: 1.8,
-              color: "#8B8578",
+              color: "#6B665C",
               fontWeight: 400,
               fontStyle: "italic",
-              borderLeft: "2px solid #B8944D",
+              borderLeft: "1px solid rgba(26,24,18,0.12)",
               paddingLeft: "20px",
             }}>
               {d.twinLine}
