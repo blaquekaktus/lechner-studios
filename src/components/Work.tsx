@@ -35,7 +35,7 @@ export default function Work() {
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         {/* Header */}
-        <div style={{
+        <div className="lc-work-header" style={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-end",
@@ -92,6 +92,7 @@ export default function Work() {
                 rel="noopener noreferrer"
                 onMouseEnter={() => setHovered(item.id)}
                 onMouseLeave={() => setHovered(null)}
+                className="lc-work-item"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "48px 1fr auto",
@@ -157,7 +158,7 @@ export default function Work() {
                 </div>
 
                 {/* Meta */}
-                <div style={{ textAlign: "right", paddingTop: "4px", flexShrink: 0 }}>
+                <div className="lc-work-meta" style={{ textAlign: "right", paddingTop: "4px", flexShrink: 0 }}>
                   <div style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: "0.6rem",

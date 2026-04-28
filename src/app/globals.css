@@ -91,4 +91,18 @@ body {
   .lc-stack-pillars {
     grid-template-columns: 1fr !important;
   }
+
+  /* Work section — internal layout fixes for narrow viewports */
+  .lc-work-header {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+  .lc-work-item {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .lc-work-meta {
+    text-align: left !important;
+    padding-top: 0 !important;
+  }
 }
