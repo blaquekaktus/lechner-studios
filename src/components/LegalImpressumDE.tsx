@@ -28,7 +28,7 @@ export default function LegalImpressumDE() {
           Offenlegung gem. § 5 ECG und § 25 MedienG.
         </p>
 
-        <section aria-labelledby="impressum-de">
+        <section>
           <div style={sectionLabelStyle}>Medieninhaber & Diensteanbieter</div>
           <div style={sectionValueStyle}>
             Sonja Lechner

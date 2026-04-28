@@ -4,11 +4,6 @@
 // (LegalImpressumDE/EN, LegalPrivacyDE/EN). Extracted from the prior
 // dual-language Impressum + Privacy pages so both halves of each page
 // stay visually identical without copy-pasted style blocks.
-//
-// Privacy-specific consts (h3Style, bodyStyle, mutedStyle, listStyle) are
-// kept inside the LegalPrivacy* components — they're only used there and
-// inlining them keeps the privacy copy + its formatting near each other
-// for legal-edit clarity.
 
 import type { CSSProperties } from "react";
 
@@ -89,4 +84,38 @@ export const backLinkStyle: CSSProperties = {
   textTransform: "uppercase",
   color: "#8B8578",
   textDecoration: "none",
+};
+
+// Privacy-page consts — shared between LegalPrivacyDE and LegalPrivacyEN.
+export const h3Style: CSSProperties = {
+  fontFamily: "var(--font-display)",
+  fontSize: "1.4rem",
+  fontWeight: 400,
+  lineHeight: 1.2,
+  letterSpacing: "-0.01em",
+  color: "#1A1812",
+  marginTop: "40px",
+  marginBottom: "12px",
+};
+
+export const bodyStyle: CSSProperties = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "1rem",
+  color: "#1A1812",
+  lineHeight: 1.8,
+  marginBottom: "16px",
+};
+
+export const mutedStyle: CSSProperties = {
+  ...bodyStyle,
+  color: "#5C594F",
+};
+
+export const listStyle: CSSProperties = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "1rem",
+  color: "#1A1812",
+  lineHeight: 1.8,
+  paddingLeft: "1.25rem",
+  marginBottom: "16px",
 };

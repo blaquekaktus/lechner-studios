@@ -5,7 +5,6 @@
 // This site is a pure marketing surface — no contact form, no analytics,
 // no cookies. Vercel is the only processor (hosting + access logs).
 
-import type { CSSProperties } from "react";
 import {
   pageStyle,
   containerStyle,
@@ -14,40 +13,11 @@ import {
   subStyle,
   linkStyle,
   backLinkStyle,
+  h3Style,
+  bodyStyle,
+  mutedStyle,
+  listStyle,
 } from "./LegalStyles";
-
-const h3Style: CSSProperties = {
-  fontFamily: "var(--font-display)",
-  fontSize: "1.4rem",
-  fontWeight: 400,
-  lineHeight: 1.2,
-  letterSpacing: "-0.01em",
-  color: "#1A1812",
-  marginTop: "40px",
-  marginBottom: "12px",
-};
-
-const bodyStyle: CSSProperties = {
-  fontFamily: "var(--font-sans)",
-  fontSize: "1rem",
-  color: "#1A1812",
-  lineHeight: 1.8,
-  marginBottom: "16px",
-};
-
-const mutedStyle: CSSProperties = {
-  ...bodyStyle,
-  color: "#5C594F",
-};
-
-const listStyle: CSSProperties = {
-  fontFamily: "var(--font-sans)",
-  fontSize: "1rem",
-  color: "#1A1812",
-  lineHeight: 1.8,
-  paddingLeft: "1.25rem",
-  marginBottom: "16px",
-};
 
 export default function LegalPrivacyDE() {
   return (
@@ -60,7 +30,7 @@ export default function LegalPrivacyDE() {
           Kontaktformular, kein Tracking, keine Analytics, keine Cookies.
         </p>
 
-        <section aria-labelledby="privacy-de">
+        <section>
           <h3 style={h3Style}>1. Verantwortliche Stelle</h3>
           <p style={bodyStyle}>
             Verantwortliche im Sinne der DSGVO ist:

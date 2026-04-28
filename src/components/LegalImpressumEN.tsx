@@ -31,7 +31,7 @@ export default function LegalImpressumEN() {
           Act (§ 25 MedienG).
         </p>
 
-        <section aria-labelledby="impressum-en">
+        <section>
           <div style={sectionLabelStyle}>Operator & Service Provider</div>
           <div style={sectionValueStyle}>
             Sonja Lechner
