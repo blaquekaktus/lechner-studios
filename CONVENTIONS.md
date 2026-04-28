@@ -11,7 +11,7 @@ Repo-specific patterns + pointers to the canonical source-of-truth specs. **Read
 
 ## Brand & positioning
 
-- Hero subline (canonical): `Modern, precise, European. Family-run, AI-native.` / `Modern, präzise, europäisch. Familiengeführt, KI-nativ.`
+- Hero subline (canonical): `Modern. Precise. European. Family-run. AI-native.` / `Modern. Präzise. Europäisch. Familiengeführt. KI-nativ.` (each adjective is a standalone declarative — period-separated for cadence, not comma-joined.)
 - Family-business positioning is canonical — Sonja Lechner (Founder) + Jason Lechner (Managing Director). Don't reintroduce "independent solo studio" or "one-person studio" framings.
 - Three-discipline framing ("product development / web design / AI systems") is **deprecated**. Four pillars are canonical: Web & Design, Apps & Automation, SEO & Growth, Brand & Identity.
 - Pillar → token mapping is locked: see brand v4.1 spec §3.3.

@@ -6,10 +6,27 @@ export const dictionaries = {
       contact: "Contact",
       toggle: "DE",
     },
+    a11y: {
+      skipLink: "Skip to main content",
+    },
+    meta: {
+      homeTitle: "Lechner Studios — Design-Led Digital Studio, Tirol",
+      homeDescription:
+        "Family-run, AI-native digital studio in Wattens, Tirol. Web & Design, Apps & Automation, SEO & Growth, Brand & Identity for SMB clients across DACH.",
+      ogLocale: "en_US",
+      orgDescription:
+        "Family-run, AI-native digital studio. Web & Design, Apps & Automation, SEO & Growth, Brand & Identity for SMB clients across DACH.",
+      impressumTitle: "Impressum",
+      impressumDescription:
+        "Legal disclosure (Impressum) for Lechner Studios per § 5 ECG and § 25 MedienG.",
+      privacyTitle: "Privacy",
+      privacyDescription:
+        "Privacy notice under GDPR for lechner-studios.at.",
+    },
     hero: {
       overline: "DESIGN-LED · TIROL · AI-NATIVE",
       tagline: "Design-led digital studio\nfrom Tirol.",
-      subline: "Modern, precise, European. Family-run, AI-native.",
+      subline: "Modern. Precise. European. Family-run. AI-native.",
       location: "WATTENS · TIROL · ÖSTERREICH",
       scroll: "SCROLL",
     },
@@ -135,10 +152,27 @@ export const dictionaries = {
       contact: "Kontakt",
       toggle: "EN",
     },
+    a11y: {
+      skipLink: "Zum Inhalt springen",
+    },
+    meta: {
+      homeTitle: "Lechner Studios — Design-orientiertes Digitalstudio, Tirol",
+      homeDescription:
+        "Familiengeführtes, KI-natives Digitalstudio in Wattens, Tirol. Web & Design, Apps & Automation, SEO & Growth, Marke & Identität für KMU im DACH-Raum.",
+      ogLocale: "de_AT",
+      orgDescription:
+        "Familiengeführtes, KI-natives Digitalstudio. Web & Design, Apps & Automation, SEO & Growth, Marke & Identität für KMU im DACH-Raum.",
+      impressumTitle: "Impressum",
+      impressumDescription:
+        "Offenlegung gem. § 5 ECG und § 25 MedienG für Lechner Studios.",
+      privacyTitle: "Datenschutz",
+      privacyDescription:
+        "Datenschutzerklärung gem. DSGVO für lechner-studios.at.",
+    },
     hero: {
       overline: "DESIGN-LED · TIROL · KI-NATIV",
       tagline: "Design-orientiertes Digitalstudio\naus Tirol.",
-      subline: "Modern, präzise, europäisch. Familiengeführt, KI-nativ.",
+      subline: "Modern. Präzise. Europäisch. Familiengeführt. KI-nativ.",
       location: "WATTENS · TIROL · ÖSTERREICH",
       scroll: "SCROLLEN",
     },
@@ -259,4 +293,4 @@ export const dictionaries = {
 };
 
 export type Dictionary = typeof dictionaries.en;
-export type Locale = keyof typeof dictionaries;
+export type { Locale } from "./config";
