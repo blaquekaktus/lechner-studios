@@ -7,6 +7,7 @@ import Nav from "../../../components/Nav";
 import Hero from "../../../components/Hero";
 import About from "../../../components/About";
 import Founder from "../../../components/Founder";
+import HowWeWork from "../../../components/HowWeWork";
 import Work from "../../../components/Work";
 import Services from "../../../components/Services";
 import Contact from "../../../components/Contact";
@@ -31,6 +32,7 @@ export default async function Home({
         <Hero />
         <About />
         <Founder />
+        <HowWeWork />
         <Work />
         <Services />
         <Contact />
