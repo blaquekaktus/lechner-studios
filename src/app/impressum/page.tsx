@@ -164,8 +164,9 @@ export default function ImpressumPage() {
 
           <div style={sectionLabelStyle}>Unternehmensgegenstand</div>
           <div style={sectionValueStyle}>
-            Unabhängiges Digitalstudio. Entwicklung digitaler Produkte,
-            Webdesign und KI-Systeme.
+            Design-orientiertes, familiengeführtes Digitalstudio. Web &
+            Design, Apps & Automation, SEO & Growth, sowie Marke &
+            Identität.
           </div>
 
           <div style={sectionLabelStyle}>Umsatzsteuer</div>
@@ -266,8 +267,8 @@ export default function ImpressumPage() {
 
           <div style={sectionLabelStyle}>Object of business</div>
           <div style={sectionValueStyle}>
-            Independent digital studio. Development of digital products, web
-            design and AI systems.
+            Design-led, family-run digital studio. Web & Design, Apps &
+            Automation, SEO & Growth, and Brand & Identity.
           </div>
 
           <div style={sectionLabelStyle}>VAT</div>
