@@ -2,8 +2,8 @@
 //
 // DE-only Datenschutzerklärung. Rendered at /de/privacy.
 // Legal copy is preserved verbatim from the prior bilingual Privacy page.
-// This site is a pure marketing surface — no contact form, no analytics,
-// no cookies. Vercel is the only processor (hosting + access logs).
+// This site has a contact form (Vercel Function → Zoho EU SMTP, email
+// only), no analytics, no cookies. Vercel + Zoho are processors.
 
 import Link from "next/link";
 import {
@@ -27,8 +27,7 @@ export default function LegalPrivacyDE() {
         <p style={overlineStyle}>Datenschutz</p>
         <h1 style={headlineStyle}>Datenschutz</h1>
         <p style={subStyle}>
-          Diese Website ist eine reine Marketingseite. Es gibt kein
-          Kontaktformular, kein Tracking, keine Analytics, keine Cookies.
+          Diese Website hat ein Kontaktformular (über eine Vercel-Funktion an unseren E-Mail-Provider Zoho weitergeleitet, ausschließlich als E-Mail gespeichert). Kein Tracking, keine Analytics, keine Cookies.
         </p>
 
         <section>
@@ -68,12 +67,9 @@ export default function LegalPrivacyDE() {
             (<code>mailto:</code>).
           </p>
 
-          <h3 style={h3Style}>3. E-Mail-Kontakt</h3>
+          <h3 style={h3Style}>3. Kontaktaufnahme</h3>
           <p style={bodyStyle}>
-            Bei einer Kontaktaufnahme per E-Mail werden die übermittelten
-            Angaben (Name, E-Mail-Adresse, Inhalt der Nachricht) verarbeitet,
-            um die Anfrage zu beantworten. Die E-Mail wird über den vom
-            Betreiber genutzten E-Mail-Provider verarbeitet und gespeichert.
+            Wenn Sie über das Kontaktformular oder per E-Mail Kontakt aufnehmen, verarbeiten wir die von Ihnen übermittelten Angaben (Name, E-Mail-Adresse, Nachrichteninhalt) zum Zweck der Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Übermittelte Formulardaten werden über eine Vercel-Funktion an unseren E-Mail-Provider Zoho weitergeleitet und dort als E-Mail in unserem Postfach gespeichert; eine Persistierung in einer Datenbank, einem CRM oder einem anderen System erfolgt nicht. Speicherdauer: gemäß Postfach-Archivierung; spätestens nach Abschluss der Korrespondenz und Ablauf gesetzlicher Aufbewahrungsfristen. Eine Einwilligung können Sie jederzeit widerrufen — die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.
           </p>
 
           <h3 style={h3Style}>4. Rechtsgrundlagen (Art. 6 DSGVO)</h3>
@@ -117,7 +113,7 @@ export default function LegalPrivacyDE() {
             Auftragsverarbeitungsvertrag mit Vercel.
           </p>
           <p style={mutedStyle}>
-            Weitere Auftragsverarbeiter werden auf dieser Website nicht
+            Darüber hinaus wird <strong>Zoho Corporation B.V.</strong> (Hoogoorddreef 15, 1101 BA Amsterdam, Niederlande) als E-Mail-Provider (Zoho Mail) eingesetzt; EU-Rechenzentrum, AVV vorhanden (<a href="https://www.zoho.com/privacy.html" target="_blank" rel="noopener noreferrer" style={linkStyle}>Datenschutzerklärung</a>). Weitere Auftragsverarbeiter werden auf dieser Website nicht
             eingesetzt — insbesondere keine Analytics-, Tracking-, Werbe-
             oder Embed-Dienste Dritter.
           </p>
