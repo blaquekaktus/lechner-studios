@@ -48,7 +48,6 @@ export const dictionaries = {
       jasonName: "Jason Lechner",
       jasonRole: "Managing Director",
       body: "Sonja Lechner is a solutions-oriented founder. When she sees a problem and no satisfying solution exists, she builds one.\n\nBorn in Grenada and Tyrolean-by-adoption since 2009, she studied Softwareentwicklung und Management at IT-Kolleg Imst. Years of relocation under difficult conditions planted the idea for Vistera — a spatial-web platform for walking through a space before visiting it in person. She built it alone between 2025 and 2026, using AI as her team, while holding a full-time role in banking-sector IT.\n\nThe same pattern shows up in Virtual Office Tirol, CodeFlash, Werk, and The AI Shortcut — each a missing thing, built.\n\nIn 2026, Lechner Studios was formed to house and continue these creations. The vision has grown from solo founder to family business. Her eldest, Jason Lechner, is Managing Director. Two other family members contribute internally, by choice not publicly positioned.",
-      twinLine: "Every leader at Lechner Studios has a disclosed AI twin. Every twin operates inside a declared, revocable autonomy scope. Inside it, the twin acts; outside it, the twin drafts — and a human decides.",
     },
     howWeWork: {
       overline: "HOW WE WORK",
@@ -199,7 +198,6 @@ export const dictionaries = {
       jasonName: "Jason Lechner",
       jasonRole: "Geschäftsführer",
       body: "Sonja Lechner ist Gründerin mit einem klaren Muster: Sie sieht ein Problem — und wenn es keine passende Lösung gibt, baut sie eine.\n\nGeboren in Grenada, seit 2009 in Tirol zu Hause, ausgebildet am IT-Kolleg Imst in Softwareentwicklung und Management. Mehrere Umzüge unter schwierigen Bedingungen wurden zur Grundlage für Vistera — eine Spatial-Web-Plattform, mit der man einen Raum durchläuft, bevor man ihn physisch besichtigt. Zwischen 2025 und 2026 alleine gebaut, mit KI als Team — parallel zu einer Vollzeitstelle in der Banken-IT.\n\nDasselbe Muster bei Virtual Office Tirol, CodeFlash, Werk und The AI Shortcut — jedes Mal eine fehlende Lösung, gebaut.\n\n2026 entstand Lechner Studios als Dach für diese Arbeiten — und um weiterzubauen. Aus der Solo-Gründerin ist ein Familienunternehmen geworden. Ihr Ältester, Jason Lechner, ist Geschäftsführer. Zwei weitere Familienmitglieder tragen intern bei — bewusst ohne öffentliche Rolle.",
-      twinLine: "Jede Führungsperson bei Lechner Studios hat einen öffentlich deklarierten KI-Zwilling. Jeder Zwilling operiert innerhalb eines deklarierten und widerrufbaren Autonomie-Bereichs. Innerhalb dieses Bereichs handelt der Zwilling selbst; außerhalb entwirft er — und ein Mensch entscheidet.",
     },
     howWeWork: {
       overline: "WIE WIR ARBEITEN",
