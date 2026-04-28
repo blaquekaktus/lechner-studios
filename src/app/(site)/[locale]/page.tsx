@@ -26,8 +26,8 @@ export default async function Home({
       <a href="#main" className="skip-link">
         {dictionaries[locale].a11y.skipLink}
       </a>
+      <Nav />
       <main id="main" style={{ minHeight: "100vh" }}>
-        <Nav />
         <Hero />
         <About />
         <Founder />

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
-import { alternateLocale } from "../i18n/config";
+import { alternateLocale, LOCALES, HREFLANG } from "../i18n/config";
 import Wordmark from "./Wordmark";
 
 export default function Nav() {
@@ -18,7 +18,8 @@ export default function Nav() {
   }, []);
 
   const alt = alternateLocale(locale);
-  const restOfPath = pathname.replace(/^\/(de|en)(?=\/|$)/, "") || "";
+  const localeRe = new RegExp(`^/(${LOCALES.join("|")})(?=/|$)`);
+  const restOfPath = pathname.replace(localeRe, "") || "";
   const altHref = `/${alt}${restOfPath}`;
   const homeHref = `/${locale}`;
 
@@ -79,7 +80,7 @@ export default function Nav() {
         <a href="#work"    style={linkStyle}>{dict.nav.work}</a>
         <a href="#about"   style={linkStyle}>{dict.nav.about}</a>
         <a href="#contact" style={linkStyle}>{dict.nav.contact}</a>
-        <Link href={altHref} hrefLang={alt === "de" ? "de-AT" : "en"} style={toggleStyle}>
+        <Link href={altHref} hrefLang={HREFLANG[alt]} style={toggleStyle}>
           {dict.nav.toggle}
         </Link>
       </div>

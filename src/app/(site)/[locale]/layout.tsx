@@ -4,7 +4,7 @@ import { Cormorant, Manrope, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../../globals.css";
 import { dictionaries } from "../../../i18n/dictionaries";
-import { LOCALES, isLocale, HREFLANG, type Locale } from "../../../i18n/config";
+import { LOCALES, isLocale, HREFLANG, alternateLocale, type Locale } from "../../../i18n/config";
 
 const cormorantBold = localFont({
   src: "../../../../public/fonts/cormorant-700.woff2",
@@ -89,7 +89,7 @@ export async function generateMetadata({
       url: `https://lechner-studios.at/${locale}`,
       siteName: "Lechner Studios",
       locale: dict.meta.ogLocale,
-      alternateLocale: dictionaries[locale === "de" ? "en" : "de"].meta.ogLocale,
+      alternateLocale: dictionaries[alternateLocale(locale)].meta.ogLocale,
       type: "website",
       images: [
         {
@@ -190,7 +190,9 @@ export default async function LocaleRootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
         />
         {children}
       </body>
