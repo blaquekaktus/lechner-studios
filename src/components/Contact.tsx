@@ -171,8 +171,9 @@ export default function Contact() {
 
                 {/* Name */}
                 <div>
-                  <label style={labelStyle}>{f.nameLabel}</label>
+                  <label htmlFor="contact-name" style={labelStyle}>{f.nameLabel}</label>
                   <input
+                    id="contact-name"
                     ref={nameRef}
                     type="text"
                     name="name"
@@ -187,8 +188,9 @@ export default function Contact() {
 
                 {/* Email */}
                 <div>
-                  <label style={labelStyle}>{f.emailLabel}</label>
+                  <label htmlFor="contact-email" style={labelStyle}>{f.emailLabel}</label>
                   <input
+                    id="contact-email"
                     ref={emailRef}
                     type="email"
                     name="email"
@@ -201,8 +203,9 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label style={labelStyle}>{f.messageLabel}</label>
+                  <label htmlFor="contact-message" style={labelStyle}>{f.messageLabel}</label>
                   <textarea
+                    id="contact-message"
                     ref={messageRef}
                     name="message"
                     required
@@ -218,6 +221,7 @@ export default function Contact() {
                 {/* Consent */}
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "24px" }}>
                   <input
+                    id="contact-consent"
                     type="checkbox"
                     name="consent"
                     required
@@ -225,7 +229,7 @@ export default function Contact() {
                     onChange={e => setConsentChecked(e.target.checked)}
                     style={{ flexShrink: 0, marginTop: "3px", cursor: "pointer" }}
                   />
-                  <label style={{
+                  <label htmlFor="contact-consent" style={{
                     fontSize: "0.78rem",
                     lineHeight: 1.6,
                     color: "#6B665C",
