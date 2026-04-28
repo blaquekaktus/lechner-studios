@@ -2,8 +2,8 @@
 //
 // EN-only Privacy notice. Rendered at /en/privacy.
 // Legal copy is preserved verbatim from the prior bilingual Privacy page.
-// This site is a pure marketing surface — no contact form, no analytics,
-// no cookies. Vercel is the only processor (hosting + access logs).
+// This site has a contact form (Vercel Function → Zoho EU SMTP, email
+// only), no analytics, no cookies. Vercel + Zoho are processors.
 
 import Link from "next/link";
 import {
@@ -27,8 +27,7 @@ export default function LegalPrivacyEN() {
         <p style={overlineStyle}>Privacy</p>
         <h1 style={headlineStyle}>Privacy</h1>
         <p style={subStyle}>
-          This site is a pure marketing surface — no contact form, no
-          tracking, no analytics, no cookies.
+          This site has a contact form (forwarded by a Vercel Function to our email provider Zoho, stored only as an email). No tracking, no analytics, no cookies.
         </p>
 
         <section>
@@ -67,12 +66,9 @@ export default function LegalPrivacyEN() {
             visitor&apos;s mail client (<code>mailto:</code>).
           </p>
 
-          <h3 style={h3Style}>3. Email contact</h3>
+          <h3 style={h3Style}>3. Contact requests</h3>
           <p style={bodyStyle}>
-            If you contact us by email, the information you transmit (name,
-            email address, content of your message) is processed in order to
-            answer your request. The message is processed and stored by the
-            email provider used by the operator.
+            If you contact us via the contact form or by email, we process the data you provide (name, email address, message body) for the purpose of handling your request. Legal basis is Art. 6(1)(b) GDPR (pre-contractual steps) and/or Art. 6(1)(a) GDPR (consent). Form submissions are forwarded by a Vercel Function to our email provider Zoho and stored as an email in our mailbox; no persistence in a database, CRM, or other system occurs. Retention: per mailbox archival; at latest after correspondence completion and applicable statutory retention periods. Consent may be withdrawn at any time — the lawfulness of processing carried out prior to withdrawal remains unaffected.
           </p>
 
           <h3 style={h3Style}>4. Legal bases (Art. 6 GDPR)</h3>
@@ -114,7 +110,7 @@ export default function LegalPrivacyEN() {
             in place with Vercel.
           </p>
           <p style={mutedStyle}>
-            No further processors are used on this site — in particular, no
+            In addition, <strong>Zoho Corporation B.V.</strong> (Hoogoorddreef 15, 1101 BA Amsterdam, Netherlands) is used as an email provider (Zoho Mail); EU data center, DPA in place (<a href="https://www.zoho.com/privacy.html" target="_blank" rel="noopener noreferrer" style={linkStyle}>privacy policy</a>). No further processors are used on this site — in particular, no
             third-party analytics, tracking, advertising or embedded
             services.
           </p>
