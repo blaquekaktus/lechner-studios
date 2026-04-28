@@ -26,7 +26,7 @@ export const dictionaries = {
     hero: {
       overline: "DESIGN-LED · TIROL · AI-NATIVE",
       tagline: "Design-led digital studio\nfrom Tirol.",
-      subline: "Modern, precise, European. Family-run, AI-native.",
+      subline: "Modern. Precise. European. Family-run. AI-native.",
       location: "WATTENS · TIROL · ÖSTERREICH",
       scroll: "SCROLL",
     },
@@ -172,7 +172,7 @@ export const dictionaries = {
     hero: {
       overline: "DESIGN-LED · TIROL · KI-NATIV",
       tagline: "Design-orientiertes Digitalstudio\naus Tirol.",
-      subline: "Modern, präzise, europäisch. Familiengeführt, KI-nativ.",
+      subline: "Modern. Präzise. Europäisch. Familiengeführt. KI-nativ.",
       location: "WATTENS · TIROL · ÖSTERREICH",
       scroll: "SCROLLEN",
     },
