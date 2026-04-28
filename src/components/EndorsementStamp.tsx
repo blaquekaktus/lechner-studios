@@ -24,7 +24,6 @@ export default function EndorsementStamp({
 }: EndorsementStampProps) {
   const v = VARIANTS[variant];
   const ink = onDark ? "#FDFBF8" : "#1A1812";
-  const gold = onDark ? "#C9A961" : "#B8944D";
 
   return (
     <div
@@ -53,33 +52,17 @@ export default function EndorsementStamp({
       </div>
       <span
         style={{
-          fontFamily: "var(--font-display-bold), Cormorant, serif",
-          fontWeight: 700,
+          fontFamily: "var(--font-sans), Manrope, sans-serif",
+          fontWeight: 600,
           fontSize: v.textSize,
-          letterSpacing: "-0.025em",
+          letterSpacing: "0.14em",
           color: ink,
           lineHeight: 1,
           whiteSpace: "nowrap",
+          textTransform: "uppercase",
         }}
       >
-        lechner
-        <span
-          style={{
-            color: gold,
-            fontFamily: "var(--font-display-italiana), Italiana, serif",
-            fontWeight: 400,
-          }}
-        >
-          .
-        </span>
-        <span
-          style={{
-            fontFamily: "var(--font-display-italiana), Italiana, serif",
-            fontWeight: 400,
-          }}
-        >
-          studios
-        </span>
+        A LECHNER STUDIOS PRODUCT
       </span>
     </div>
   );
