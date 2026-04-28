@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
-  const { dict } = useLanguage();
+  const { dict, locale } = useLanguage();
   const d = dict.contact;
 
   return (
@@ -93,7 +94,7 @@ export default function Contact() {
             </p>
 
             <div style={{ display: "flex", gap: "24px" }}>
-              <a href="/impressum" style={{
+              <Link href={`/${locale}/impressum`} style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.6rem",
                 color: "#B0A898",
@@ -106,8 +107,8 @@ export default function Contact() {
                 onMouseLeave={e => ((e.target as HTMLElement).style.color = "#B0A898")}
               >
                 {d.impressum}
-              </a>
-              <a href="/privacy" style={{
+              </Link>
+              <Link href={`/${locale}/privacy`} style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.6rem",
                 color: "#B0A898",
@@ -120,7 +121,7 @@ export default function Contact() {
                 onMouseLeave={e => ((e.target as HTMLElement).style.color = "#B0A898")}
               >
                 {d.privacy}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
