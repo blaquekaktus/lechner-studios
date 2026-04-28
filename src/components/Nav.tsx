@@ -1,10 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
+import { alternateLocale } from "../i18n/config";
 import Wordmark from "./Wordmark";
 
 export default function Nav() {
-  const { dict, toggleLanguage } = useLanguage();
+  const { dict, locale } = useLanguage();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -12,6 +16,11 @@ export default function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const alt = alternateLocale(locale);
+  const restOfPath = pathname.replace(/^\/(de|en)(?=\/|$)/, "") || "";
+  const altHref = `/${alt}${restOfPath}`;
+  const homeHref = `/${locale}`;
 
   const navStyle: React.CSSProperties = {
     position: "fixed",
@@ -63,14 +72,16 @@ export default function Nav() {
 
   return (
     <nav className="lc-pad-nav" style={navStyle}>
-      <a href="#" style={logoLinkStyle} aria-label="Lechner Studios">
+      <Link href={homeHref} style={logoLinkStyle} aria-label="Lechner Studios">
         <Wordmark variant="inline" size={22} onDark={!scrolled} />
-      </a>
+      </Link>
       <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
         <a href="#work"    style={linkStyle}>{dict.nav.work}</a>
         <a href="#about"   style={linkStyle}>{dict.nav.about}</a>
         <a href="#contact" style={linkStyle}>{dict.nav.contact}</a>
-        <button onClick={toggleLanguage} style={toggleStyle}>{dict.nav.toggle}</button>
+        <Link href={altHref} hrefLang={alt === "de" ? "de-AT" : "en"} style={toggleStyle}>
+          {dict.nav.toggle}
+        </Link>
       </div>
     </nav>
   );
