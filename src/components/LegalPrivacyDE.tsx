@@ -61,10 +61,7 @@ export default function LegalPrivacyDE() {
           <p style={bodyStyle}>
             Diese Website setzt <strong>keine Cookies</strong>, betreibt
             <strong> kein Tracking</strong> und nutzt{" "}
-            <strong>keine Analytics-Dienste</strong>. Es existiert{" "}
-            <strong>kein Kontaktformular</strong>; der Kontakt-Link öffnet
-            ausschließlich das E-Mail-Programm der Nutzerin/des Nutzers
-            (<code>mailto:</code>).
+            <strong>keine Analytics-Dienste</strong>.
           </p>
 
           <h3 style={h3Style}>3. Kontaktaufnahme</h3>

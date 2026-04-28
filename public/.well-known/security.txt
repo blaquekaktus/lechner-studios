@@ -1,0 +1,4 @@
+Contact: mailto:hallo@lechner-studios.at
+Expires: 2027-04-28T00:00:00Z
+Preferred-Languages: de, en
+Canonical: https://lechner-studios.at/.well-known/security.txt

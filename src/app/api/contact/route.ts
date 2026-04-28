@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
-  const name = (payload.name ?? "").trim();
+  const name = (payload.name ?? "").trim().replace(/[\r\n]/g, "");
   const email = (payload.email ?? "").trim();
   const message = (payload.message ?? "").trim();
 

@@ -303,12 +303,12 @@ export default function Contact() {
               }}>
                 {f.mailtoFallback}{" "}
                 <a
-                  href="mailto:hallo@lechner-studios.at"
+                  href={`mailto:${d.email}`}
                   style={{ color: "#8B8578", textDecoration: "underline" }}
                   onMouseEnter={e => ((e.target as HTMLElement).style.color = "#B8944D")}
                   onMouseLeave={e => ((e.target as HTMLElement).style.color = "#8B8578")}
                 >
-                  hallo@lechner-studios.at
+                  {d.email}
                 </a>
               </p>
             )}
