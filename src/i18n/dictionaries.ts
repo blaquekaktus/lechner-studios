@@ -128,6 +128,7 @@ export const dictionaries = {
     footer: {
       rights: "All rights reserved.",
       tagline: "Built with precision. Tirol, Österreich.",
+      endorsement: "A LECHNER STUDIOS PRODUCT",
     },
   },
 
@@ -260,6 +261,7 @@ export const dictionaries = {
     footer: {
       rights: "Alle Rechte vorbehalten.",
       tagline: "Mit Präzision gebaut. Tirol, Österreich.",
+      endorsement: "EIN LECHNER STUDIOS PRODUKT",
     },
   },
 };
