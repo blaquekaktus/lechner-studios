@@ -31,13 +31,13 @@ export default function Founder() {
           {d.overline}
         </p>
 
+        {/* Photo row — Sonja + Jason side by side, captioned */}
         <div className="lc-stack-2col" style={{
           display: "grid",
-          gridTemplateColumns: "minmax(260px, 0.85fr) 1.5fr",
-          gap: "72px",
-          alignItems: "start",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "32px",
+          marginBottom: "72px",
         }}>
-          {/* Photo column */}
           <figure style={{ margin: 0 }}>
             <Image
               src="/founder/sonja-lechner.jpg"
@@ -45,55 +45,108 @@ export default function Founder() {
               width={1078}
               height={1456}
               priority
-              sizes="(max-width: 900px) 90vw, 380px"
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-              }}
+              sizes="(max-width: 900px) 90vw, 520px"
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
+            <figcaption style={{ marginTop: "16px" }}>
+              <div style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "1.25rem",
+                fontWeight: 400,
+                letterSpacing: "-0.005em",
+                color: "#1A1812",
+                lineHeight: 1.2,
+              }}>
+                {d.sonjaName}
+              </div>
+              <div style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.6rem",
+                fontWeight: 600,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#8B8578",
+                marginTop: "6px",
+              }}>
+                {d.sonjaRole}
+              </div>
+            </figcaption>
           </figure>
 
-          {/* Text column */}
-          <div>
-            <h2
-              id="founder-heading"
-              style={{
+          <figure style={{ margin: 0 }}>
+            <Image
+              src="/founder/jason-lechner.jpg"
+              alt={d.jasonPhotoAlt}
+              width={1080}
+              height={1440}
+              sizes="(max-width: 900px) 90vw, 520px"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+            <figcaption style={{ marginTop: "16px" }}>
+              <div style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                fontSize: "1.25rem",
                 fontWeight: 400,
-                lineHeight: 1.15,
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.005em",
                 color: "#1A1812",
-                marginBottom: "32px",
-              }}
-            >
-              {d.headline}
-            </h2>
+                lineHeight: 1.2,
+              }}>
+                {d.jasonName}
+              </div>
+              <div style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.6rem",
+                fontWeight: 600,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#8B8578",
+                marginTop: "6px",
+              }}>
+                {d.jasonRole}
+              </div>
+            </figcaption>
+          </figure>
+        </div>
 
-            <div style={{
-              fontSize: "1rem",
-              lineHeight: 1.9,
+        {/* Text block — full-width below the photo row */}
+        <div style={{ maxWidth: "780px" }}>
+          <h2
+            id="founder-heading"
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(2rem, 3.5vw, 3rem)",
+              fontWeight: 400,
+              lineHeight: 1.15,
+              letterSpacing: "-0.02em",
               color: "#1A1812",
-              fontWeight: 400,
               marginBottom: "32px",
-              whiteSpace: "pre-line",
-            }}>
-              {d.body}
-            </div>
+            }}
+          >
+            {d.headline}
+          </h2>
 
-            <p style={{
-              fontSize: "0.95rem",
-              lineHeight: 1.8,
-              color: "#6B665C",
-              fontWeight: 400,
-              fontStyle: "italic",
-              borderLeft: "1px solid rgba(26,24,18,0.12)",
-              paddingLeft: "20px",
-            }}>
-              {d.twinLine}
-            </p>
+          <div style={{
+            fontSize: "1rem",
+            lineHeight: 1.9,
+            color: "#1A1812",
+            fontWeight: 400,
+            marginBottom: "32px",
+            whiteSpace: "pre-line",
+          }}>
+            {d.body}
           </div>
+
+          <p style={{
+            fontSize: "0.95rem",
+            lineHeight: 1.8,
+            color: "#6B665C",
+            fontWeight: 400,
+            fontStyle: "italic",
+            borderLeft: "1px solid rgba(26,24,18,0.12)",
+            paddingLeft: "20px",
+          }}>
+            {d.twinLine}
+          </p>
         </div>
       </div>
     </section>
