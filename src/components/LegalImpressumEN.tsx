@@ -6,6 +6,7 @@
 // The Lechner-Studios FlexKapG is in formation but not yet operative;
 // legal pages update in lockstep when the Firmenbuch entry lands.
 
+import Link from "next/link";
 import {
   pageStyle,
   containerStyle,
@@ -123,9 +124,9 @@ export default function LegalImpressumEN() {
           </div>
         </section>
 
-        <a href="/en" style={backLinkStyle}>
+        <Link href="/en" style={backLinkStyle}>
           ← Back
-        </a>
+        </Link>
       </div>
     </main>
   );

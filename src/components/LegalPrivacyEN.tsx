@@ -5,6 +5,7 @@
 // This site is a pure marketing surface — no contact form, no analytics,
 // no cookies. Vercel is the only processor (hosting + access logs).
 
+import Link from "next/link";
 import {
   pageStyle,
   containerStyle,
@@ -191,9 +192,9 @@ export default function LegalPrivacyEN() {
           </p>
         </section>
 
-        <a href="/en" style={backLinkStyle}>
+        <Link href="/en" style={backLinkStyle}>
           ← Back
-        </a>
+        </Link>
       </div>
     </main>
   );

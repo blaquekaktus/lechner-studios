@@ -10,6 +10,7 @@ export default function Nav() {
   const { dict, locale } = useLanguage();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hash, setHash] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -17,10 +18,20 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Track URL hash so the language-toggle Link preserves the user's
+  // anchor when they switch locales. usePathname() excludes the hash
+  // by design, so we track it in client state and append on render.
+  useEffect(() => {
+    const sync = () => setHash(window.location.hash);
+    sync();
+    window.addEventListener("hashchange", sync);
+    return () => window.removeEventListener("hashchange", sync);
+  }, []);
+
   const alt = alternateLocale(locale);
   const localeRe = new RegExp(`^/(${LOCALES.join("|")})(?=/|$)`);
   const restOfPath = pathname.replace(localeRe, "") || "";
-  const altHref = `/${alt}${restOfPath}`;
+  const altHref = `/${alt}${restOfPath}${hash}`;
   const homeHref = `/${locale}`;
 
   const navStyle: React.CSSProperties = {
