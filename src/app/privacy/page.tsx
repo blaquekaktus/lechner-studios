@@ -305,7 +305,7 @@ export default function PrivacyPage() {
 
           <h3 style={h3Style}>10. Aktualität</h3>
           <p style={bodyStyle}>
-            Stand: 2026. Diese Erklärung wird angepasst, sobald sich
+            Stand: April 2026. Diese Erklärung wird angepasst, sobald sich
             Verarbeitungen ändern (z. B. wenn ein Kontaktformular oder
             Analytics ergänzt wird).
           </p>
@@ -472,10 +472,10 @@ export default function PrivacyPage() {
             operator may also process data when receiving inbound mail.
           </p>
 
-          <h3 style={h3Style}>10. Currency</h3>
+          <h3 style={h3Style}>10. Last updated</h3>
           <p style={bodyStyle}>
-            As of 2026. This notice is updated whenever processing changes
-            (e.g. if a contact form or analytics is added).
+            April 2026. Updated whenever processing changes (e.g. if a
+            contact form or analytics is added).
           </p>
         </section>
 
