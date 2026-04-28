@@ -135,18 +135,6 @@ export default function Founder() {
           }}>
             {d.body}
           </div>
-
-          <p style={{
-            fontSize: "0.95rem",
-            lineHeight: 1.8,
-            color: "#6B665C",
-            fontWeight: 400,
-            fontStyle: "italic",
-            borderLeft: "1px solid rgba(26,24,18,0.12)",
-            paddingLeft: "20px",
-          }}>
-            {d.twinLine}
-          </p>
         </div>
       </div>
     </section>
