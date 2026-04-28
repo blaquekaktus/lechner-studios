@@ -11,6 +11,7 @@ export default function Founder() {
     <section
       id="founder"
       aria-labelledby="founder-heading"
+      className="lc-pad-section"
       style={{
         background: "#FDFBF8",
         padding: "120px 48px",
@@ -30,7 +31,7 @@ export default function Founder() {
           {d.overline}
         </p>
 
-        <div style={{
+        <div className="lc-stack-2col" style={{
           display: "grid",
           gridTemplateColumns: "minmax(260px, 0.85fr) 1.5fr",
           gap: "72px",

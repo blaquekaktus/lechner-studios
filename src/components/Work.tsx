@@ -26,6 +26,7 @@ export default function Work() {
   return (
     <section
       id="work"
+      className="lc-pad-section"
       style={{
         background: "#FDFBF8",
         padding: "120px 48px",

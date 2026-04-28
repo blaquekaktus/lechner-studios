@@ -9,6 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      className="lc-pad-section"
       style={{
         background: "#F6F1EB",
         padding: "120px 48px",
@@ -16,7 +17,7 @@ export default function Contact() {
       }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        <div style={{
+        <div className="lc-stack-2col" style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "80px",

@@ -62,7 +62,7 @@ export default function Nav() {
   };
 
   return (
-    <nav style={navStyle}>
+    <nav className="lc-pad-nav" style={navStyle}>
       <a href="#" style={logoLinkStyle} aria-label="Lechner Studios">
         <Wordmark variant="inline" size={22} onDark={!scrolled} />
       </a>
