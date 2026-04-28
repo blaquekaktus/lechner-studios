@@ -981,7 +981,9 @@ export default function LegalImpressumEN() {
     <main style={pageStyle}>
       <div style={containerStyle}>
         <p style={overlineStyle}>Legal disclosure</p>
-        <h1 style={headlineStyle}>Imprint</h1>
+        {/* "Impressum" is preserved as the EN headline per CONVENTIONS.md
+            legal-page exception — it's the registered legal designation in AT. */}
+        <h1 style={headlineStyle}>Impressum</h1>
         <p style={subStyle}>
           Disclosure pursuant to Austrian E-Commerce Act (§ 5 ECG) and Media
           Act (§ 25 MedienG).
