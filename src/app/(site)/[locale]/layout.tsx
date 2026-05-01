@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Cormorant, Manrope, JetBrains_Mono } from "next/font/google";
+import { Cormorant } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../../globals.css";
 import { dictionaries } from "../../../i18n/dictionaries";
 import { LOCALES, isLocale, HREFLANG, alternateLocale, type Locale } from "../../../i18n/config";
+
+// Brand v4.2 typography — display unchanged from v4.1.
+// Body sans: General Sans (replaces Manrope). Mono: IBM Plex Mono (replaces JetBrains Mono).
+// Cormorant pruned to display midweights only — body serif retired per spec §3.
+// Spec: websites/docs/superpowers/specs/2026-05-01-brand-v4.2-typography-design.md
+// Companion ADR: ai-brain/decisions/0027-lechner-brand-guidelines-v4.2-typography.md
 
 const cormorantBold = localFont({
   src: "../../../../public/fonts/cormorant-700.woff2",
@@ -25,23 +31,28 @@ const italiana = localFont({
 const cormorant = Cormorant({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const manrope = Manrope({
+const generalSans = localFont({
   variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  src: [
+    { path: "../../../../public/fonts/general-sans-400.woff2", weight: "400", style: "normal" },
+    { path: "../../../../public/fonts/general-sans-500.woff2", weight: "500", style: "normal" },
+    { path: "../../../../public/fonts/general-sans-600.woff2", weight: "600", style: "normal" },
+  ],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const ibmPlexMono = localFont({
   variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
+  src: [
+    { path: "../../../../public/fonts/ibm-plex-mono-400.woff2", weight: "400", style: "normal" },
+    { path: "../../../../public/fonts/ibm-plex-mono-500.woff2", weight: "500", style: "normal" },
+  ],
 });
 
 export async function generateStaticParams() {
@@ -186,7 +197,7 @@ export default async function LocaleRootLayout({
   return (
     <html lang={HREFLANG[locale]}>
       <body
-        className={`${cormorantBold.variable} ${italiana.variable} ${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${cormorantBold.variable} ${italiana.variable} ${cormorant.variable} ${generalSans.variable} ${ibmPlexMono.variable} antialiased`}
       >
         <script
           type="application/ld+json"
