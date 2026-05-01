@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Cormorant, Manrope, JetBrains_Mono } from "next/font/google";
+import { Cormorant } from "next/font/google";
 import "./globals.css";
 
-// v4.1 display canonical: Cormorant 700 + Italiana 400, self-hosted
+// Brand v4.2 typography — display unchanged from v4.1
+// Cormorant 700 + Italiana 400 self-hosted; Cormorant 500/600 for H1–H3
+// Body sans: General Sans (replaces Manrope), Mono: IBM Plex Mono (replaces JetBrains Mono)
+// Per design spec: websites/docs/superpowers/specs/2026-05-01-brand-v4.2-typography-design.md
+// Companion ADR: ai-brain/decisions/0020-lechner-brand-guidelines-v4.2-typography.md
+
 const cormorantBold = localFont({
   src: "../../public/fonts/cormorant-700.woff2",
   weight: "700",
@@ -20,27 +25,54 @@ const italiana = localFont({
   variable: "--font-display-italiana",
 });
 
-// Body copy — Cormorant (lighter weights), Manrope, JetBrains Mono
+// Cormorant 500/600 — H1–H3 display midweights (body serif retired in v4.2)
 const cormorant = Cormorant({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const manrope = Manrope({
+// General Sans — body / UI / nav / buttons (v4.2 body sans)
+const generalSans = localFont({
   variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/general-sans-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/general-sans-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/general-sans-600.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+// IBM Plex Mono — eyebrows, captions, stat values (v4.2 umbrella mono)
+const ibmPlexMono = localFont({
   variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/ibm-plex-mono-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ibm-plex-mono-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -102,7 +134,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${cormorantBold.variable} ${italiana.variable} ${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${cormorantBold.variable} ${italiana.variable} ${cormorant.variable} ${generalSans.variable} ${ibmPlexMono.variable} antialiased`}
       >
         {children}
       </body>

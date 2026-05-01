@@ -52,7 +52,7 @@ export default function EndorsementStamp({
       </div>
       <span
         style={{
-          fontFamily: "var(--font-sans), Manrope, sans-serif",
+          fontFamily: "var(--font-sans), 'General Sans', sans-serif",
           fontWeight: 600,
           fontSize: v.textSize,
           letterSpacing: "0.14em",
