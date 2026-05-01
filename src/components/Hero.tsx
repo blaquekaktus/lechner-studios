@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section
-      className="grain"
+      className="grain lc-pad-hero"
       style={{
         position: "relative",
         minHeight: "100vh",
@@ -70,6 +70,24 @@ export default function Hero() {
           className="reveal reveal-3"
           style={{ width: "48px", height: "1px", background: "#C9A961", marginBottom: "2.5rem" }}
         />
+
+        {/* Italiana sub-line */}
+        <p
+          className="reveal"
+          style={{
+            fontFamily: "var(--font-display-italiana)",
+            fontSize: "clamp(1.1rem, 1.7vw, 1.5rem)",
+            fontWeight: 400,
+            lineHeight: 1.4,
+            letterSpacing: "0.005em",
+            color: "rgba(246,241,235,0.78)",
+            marginBottom: "2.5rem",
+            maxWidth: "640px",
+            animationDelay: "0.65s",
+          }}
+        >
+          {dict.hero.subline}
+        </p>
 
         {/* Location */}
         <p

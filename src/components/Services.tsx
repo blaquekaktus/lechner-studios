@@ -2,13 +2,23 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 
+// Canonical pillar palette per brand spec §3.3
+// (websites/docs/superpowers/specs/2026-04-27-brand-v4.1-design.md, lines 185-188)
+// Order matches the 2×2 grid: TL=Stone, TR=Sky, BL=Lake, BR=Pine.
+const PILLARS = [
+  { bg: "var(--color-pillar-stone)", text: "#4A4131", muted: "rgba(74,65,49,0.72)" },
+  { bg: "var(--color-pillar-sky)",   text: "#1A1812", muted: "rgba(26,24,18,0.70)" },
+  { bg: "var(--color-pillar-lake)",  text: "#FDFBF8", muted: "rgba(253,251,248,0.78)" },
+  { bg: "var(--color-pillar-pine)",  text: "#FDFBF8", muted: "rgba(253,251,248,0.78)" },
+];
+
 export default function Services() {
   const { dict } = useLanguage();
   const d = dict.services;
 
   return (
     <section
-      className="grain"
+      className="grain lc-pad-section"
       style={{
         position: "relative",
         background: "#1A1812",
@@ -50,55 +60,68 @@ export default function Services() {
           {d.headline}
         </h2>
 
-        {/* 3-column grid */}
-        <div style={{
+        {/* 2×2 pillar grid — full pillar-colored cells per brand spec §3.3 */}
+        <div className="lc-stack-pillars" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: "1px",
           background: "rgba(246,241,235,0.07)",
         }}>
-          {d.items.map((item, i) => (
-            <div
-              key={i}
-              style={{
-                padding: "48px 40px",
-                background: "#1A1812",
-                transition: "background 0.3s",
-              }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#252219")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#1A1812")}
-            >
-              <div style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.6rem",
-                color: "#C9A961",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                fontWeight: 600,
-                marginBottom: "20px",
-              }}>
-                0{i + 1}
+          {d.items.map((item, i) => {
+            const p = PILLARS[i] ?? PILLARS[0];
+            return (
+              <div
+                key={i}
+                className="grain"
+                style={{
+                  position: "relative",
+                  padding: "56px 48px",
+                  background: p.bg,
+                  overflow: "hidden",
+                  minHeight: "260px",
+                }}
+              >
+                <div style={{
+                  position: "relative",
+                  zIndex: 1,
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.6rem",
+                  color: p.text,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  fontWeight: 600,
+                  marginBottom: "20px",
+                  opacity: 0.7,
+                }}>
+                  0{i + 1}
+                </div>
+                <h3 style={{
+                  position: "relative",
+                  zIndex: 1,
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.7rem",
+                  fontWeight: 500,
+                  color: p.text,
+                  marginBottom: "16px",
+                  lineHeight: 1.2,
+                  letterSpacing: "0.005em",
+                }}>
+                  {item.title}
+                </h3>
+                <p style={{
+                  position: "relative",
+                  zIndex: 1,
+                  fontSize: "0.92rem",
+                  color: p.muted,
+                  lineHeight: 1.7,
+                  fontWeight: 400,
+                  maxWidth: "44ch",
+                }}>
+                  {item.desc}
+                </p>
               </div>
-              <h3 style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "1.6rem",
-                fontWeight: 400,
-                color: "#F6F1EB",
-                marginBottom: "16px",
-                lineHeight: 1.2,
-              }}>
-                {item.title}
-              </h3>
-              <p style={{
-                fontSize: "0.88rem",
-                color: "rgba(246,241,235,0.45)",
-                lineHeight: 1.8,
-                fontWeight: 400,
-              }}>
-                {item.desc}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

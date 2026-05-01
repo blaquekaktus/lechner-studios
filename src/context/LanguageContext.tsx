@@ -1,25 +1,25 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
-import { dictionaries, Dictionary, Locale } from "../i18n/dictionaries";
+import React, { createContext, useContext, ReactNode } from "react";
+import { dictionaries, type Dictionary } from "../i18n/dictionaries";
+import { type Locale } from "../i18n/config";
 
 interface LanguageContextType {
   locale: Locale;
   dict: Dictionary;
-  toggleLanguage: () => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [locale, setLocale] = useState<Locale>("en");
-
-  const toggleLanguage = () => {
-    setLocale((prev) => (prev === "en" ? "de" : "en"));
-  };
-
+export const LanguageProvider = ({
+  locale,
+  children,
+}: {
+  locale: Locale;
+  children: ReactNode;
+}) => {
   return (
-    <LanguageContext.Provider value={{ locale, dict: dictionaries[locale], toggleLanguage }}>
+    <LanguageContext.Provider value={{ locale, dict: dictionaries[locale] }}>
       {children}
     </LanguageContext.Provider>
   );

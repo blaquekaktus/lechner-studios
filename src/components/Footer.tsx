@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
-import Wordmark from "./Wordmark";
+import EndorsementStamp from "./EndorsementStamp";
 
 export default function Footer() {
   const { dict } = useLanguage();
@@ -9,40 +9,46 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{
+    <footer className="lc-pad-footer" style={{
       background: "#1A1812",
-      padding: "40px 48px",
+      padding: "48px 48px 32px",
       display: "flex",
-      justifyContent: "space-between",
+      flexDirection: "column",
       alignItems: "center",
-      gap: "20px",
-      flexWrap: "wrap",
+      gap: "32px",
       borderTop: "1px solid rgba(246,241,235,0.06)",
     }}>
-      <span aria-label="Lechner Studios" style={{ display: "inline-flex" }}>
-        <Wordmark variant="inline" size={20} onDark />
-      </span>
+      <EndorsementStamp variant="small" onDark text={d.endorsement} />
 
-      <span style={{
-        fontFamily: "var(--font-mono)",
-        fontSize: "0.6rem",
-        color: "rgba(246,241,235,0.2)",
-        letterSpacing: "0.15em",
-        textTransform: "uppercase",
-        textAlign: "center",
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "32px",
+        flexWrap: "wrap",
+        width: "100%",
       }}>
-        {d.tagline}
-      </span>
+        <span style={{
+          fontFamily: "var(--font-mono)",
+          fontSize: "0.6rem",
+          color: "rgba(246,241,235,0.2)",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          textAlign: "center",
+        }}>
+          {d.tagline}
+        </span>
 
-      <span style={{
-        fontFamily: "var(--font-mono)",
-        fontSize: "0.6rem",
-        color: "rgba(246,241,235,0.25)",
-        letterSpacing: "0.12em",
-        textTransform: "uppercase",
-      }}>
-        © {year} · {d.rights}
-      </span>
+        <span style={{
+          fontFamily: "var(--font-mono)",
+          fontSize: "0.6rem",
+          color: "rgba(246,241,235,0.25)",
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+        }}>
+          © {year} · {d.rights}
+        </span>
+      </div>
     </footer>
   );
 }

@@ -75,3 +75,86 @@ body {
 .reveal-3 { animation-delay: 0.5s; }
 .reveal-4 { animation-delay: 0.7s; }
 .reveal-5 { animation-delay: 0.9s; }
+
+/* Skip-link — visible only when focused (keyboard / screen-reader users).
+ * Sits at the very top of the document; href="#main" jumps past the
+ * fixed Nav into the main content. */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  padding: 12px 20px;
+  background: #1A1812;
+  color: #FDFBF8;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Focus visibility — keyboard users always see what's focused. */
+:focus-visible {
+  outline: 2px solid #B8944D;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Reduced motion — respect prefers-reduced-motion.
+ * .reveal text becomes immediately visible; scrollPulse / fadeUp halt. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Mobile breakpoint — stack two-column grids and tighten section padding.
+ * !important is used because the components set padding and
+ * grid-template-columns inline; inline styles otherwise win against
+ * class-based rules. */
+@media (max-width: 768px) {
+  .lc-pad-section { padding: 72px 24px !important; }
+  .lc-pad-hero    { padding: 0 24px 64px !important; }
+  .lc-pad-footer  { padding: 28px 24px !important; }
+  .lc-pad-nav     { padding-left: 24px !important; padding-right: 24px !important; }
+
+  .lc-stack-2col {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .lc-stack-pillars {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Work section — internal layout fixes for narrow viewports */
+  .lc-work-header {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+  .lc-work-item {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .lc-work-meta {
+    text-align: left !important;
+    padding-top: 0 !important;
+  }
+}
